@@ -46,7 +46,7 @@ __all__ = ('EC2CloudPlugin',)
 log = logging.getLogger(__name__)
 
 
-def registration_retry(ExceptionToCheck=(EC2ResponseError,), tries=3, delay=1, backoff=1, logger=None):
+def registration_retry(ExceptionToCheck=(EC2ResponseError,), tries=5, delay=1, backoff=1, logger=None):
     """
     a slightly tweaked form of aminator.util.retry for handling retries on image registration
     """
