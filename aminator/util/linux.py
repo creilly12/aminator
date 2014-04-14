@@ -102,7 +102,7 @@ def mount(mountspec):
 
 @command()
 def unmount(dev):
-    return 'umount {0}'.format(dev)
+    return 'umount -f {0}'.format(dev)
 
 
 @command()
